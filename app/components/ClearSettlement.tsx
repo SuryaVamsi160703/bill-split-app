@@ -6,6 +6,7 @@ import { useState } from 'react'
 type Props = {
   expenses: Expense[]
   groupMembers: string[]
+  dark?: boolean
 }
 
 type DebtGroup = {
@@ -23,7 +24,7 @@ type PersonOwes = {
   totalOwes: number
 }
 
-export default function ClearSettlement({ expenses, groupMembers }: Props) {
+export default function ClearSettlement({ expenses, groupMembers, dark }: Props) {
   const [selectedPerson, setSelectedPerson] = useState<string | null>(null)
 
   // Calculate who owes whom - COMBINED by recipient

@@ -4,6 +4,7 @@ import { useState } from 'react'
 
 type Props = {
   groupMembers: string[]
+  dark?: boolean
   onAdd: (expense: {
     description: string
     amount: number
@@ -12,7 +13,7 @@ type Props = {
   }) => void
 }
 
-export default function AddExpense({ groupMembers, onAdd }: Props) {
+export default function AddExpense({ groupMembers, onAdd, dark }: Props) {
   const [description, setDescription] = useState('')
   const [amount, setAmount] = useState('')
   const [paidBy, setPaidBy] = useState('')

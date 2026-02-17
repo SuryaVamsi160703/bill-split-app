@@ -4,10 +4,11 @@ import { Expense } from '../page'
 
 type Props = {
   expenses: Expense[]
+  dark?: boolean
   onDelete: (id: string) => void
 }
 
-export default function ExpenseList({ expenses, onDelete }: Props) {
+export default function ExpenseList({ expenses, onDelete, dark }: Props) {
   if (expenses.length === 0) {
     return null
   }
